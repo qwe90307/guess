@@ -1,16 +1,19 @@
 import random
+start = input ('請決定number range初始值: ')
+end = input ('請決定number range結束值: ')
+start = int(start)
+end = int(end)
+r = random.randint(start, end)
 
-r = random.randint(1,100)
 count = 0
-i = 9999
 
 while True:
-	count += 1 # count = count + 1
-	number = input('請輸入1~100的數字: ')
-	number = int(number)
-	if number > r:
+	count += 1 # count = count + 1	
+	num = input('請猜數字: ')
+	num = int(num)
+	if num > r:
 		print('再小一些')
-	elif number < r:
+	elif num < r:
 		print('再大一些')
 	else:
 		print('答對了!')
